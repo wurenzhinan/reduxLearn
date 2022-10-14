@@ -1,5 +1,4 @@
-import { createStore } from 'redux'
-import math from "./reducer/math"
+import store from './store/store'
 import { Provider } from 'react-redux'
 import Container from './components/Container'
 //store:存储数据的仓库 store是需要依赖reducer的
@@ -11,7 +10,6 @@ import Container from './components/Container'
 // 此时state的值要去reducer中找，当没有调用dispatch的时候，state就是reducer中传入的默认值
 // 调用dispatch更新state，dispatch的返回值就是传入的action对象
 // 再通过getState拿到的state就是更新后的state了
-const store = createStore(math)
 // 展示组件和容器组件
 function App () {
   // console.log(store.getState())
